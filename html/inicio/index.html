@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FML | Inicio</title>
+    <link  rel="icon"   href="../../img/user1.jpg" type="image/png" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="../../css/styleNoticeX.css">
+</head>
+<body>
+    
+    <section class="section">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+
+              <div class="swiper-slide">
+                  <div class="testimonialBox">
+                    <a href="https://www.youtube.com/watch?v=I0dsdMycn_0&list=PL3clNCeTIfW_GnhTwtP2s1CuLnvv7bnM2" class="linkNotice6">Youtube</a> 
+                    <a href="https://docs.google.com/document/d/13ySNxAkrApkKzj4FFeFRTVEm93gdMpC3-CUe32W1aKM/edit" class="linkNotice2">Reglas</a>
+                    <div class="content">
+                        <h3>Participantes</h3>
+                        <br>
+                        <p>La lista de participantes en esta edición son: </p>
+                        <div class="lista"><ul>
+                            <li>C.E.Jojojoi</li>
+                            <li>Josuh99 F.C</li>
+                            <li>Andresastasio FC</li>
+                            <li>CF mrl300pro</li>
+                            <li>Matadxr_FC</li>
+                            <li>sarandongaFC</li>
+                            <li>kApps TeaM</li>
+                            <li>mikimassot65 UE</li>
+                            <li>Jandruu Fc</li>
+                            <li>MatuteM7 FC</li>
+                            <li>Wokakola FC</li>
+                            <li>Pablogc FC</li>
+                        </ul></div>
+
+                        <p><br>En el botón de arriba a la derecha podéis ver las reglas oficiales de la FML y en el botón de la izquierda tenéis la lista de reproducción con los vídeos de la FML del canal de kApps (dale like y suscríbete :P) donde habrá un resumen semanal de la FML.</p>
+
+                        <div class="details">
+                            <div class="imgBx">
+                                <img src="../../img/inicio.jpg" alt="">
+                            </div>
+                        </div>
+                        
+                    </div>
+                  </div>
+              </div>
+          </div>
+    </section>
+
+    <div class="menuToggle" onclick="ToggleMenu()"></div>
+    <div class="navigation">
+        
+        <div class="navArea">
+            <ul>
+                <li>
+                    <a href="../inicio/index.html" onmouseenter="changeImage('../../img/img2.jpg')">Inicio</a>
+                </li>
+                <li>
+                    <a href="../equipo/index.html" onmouseenter="changeImage('../../img/img3.jpg')">Equipos</a>
+                </li>
+                <li>
+                    <a href="../partidos/index.html" onmouseenter="changeImage('../../img/img4.jpg')">Partidos</a>
+                </li>
+                <li>
+                    <a href="../clasificacion/index.html" onmouseenter="changeImage('../../img/img7.jpg')">Clasificación</a>
+                </li>
+                <li>
+                    <a href="../estadisticas/index.html" onmouseenter="changeImage('../../img/img5.jpg')">Estadísticas</a>
+                </li>
+                <li>
+                    <a href="../construccion/index.html" onmouseenter="changeImage('../../img/img1.jpg')">Otras ediciones</a>
+                </li>
+            </ul>
+        </div>
+        <div class="imgArea">
+            <img src="../../img/img1.jpg" id="slider" alt="">
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+          effect: 'coverflow',
+          grabCursor: true,
+          centeredSlides: true,
+          slidesPerView: 'auto',
+          coverflowEffect: {
+            rotate: 0, //estaba a 50
+            stretch: 0,
+            depth: 100,
+            modifier: 2, //estaba a 1
+            slideShadows: true,
+          },
+          /*loop: true,*/
+          pagination: {
+             el: '.swiper-pagination',
+          },
+        });
+
+        function changeImage(anything) {
+            document.getElementById('slider').src = anything;
+        }
+
+        function ToggleMenu() {
+            const menuToggle = document.querySelector('.menuToggle');
+            const navigation = document.querySelector('.navigation');
+            const section = document.querySelector('.section');
+            menuToggle.classList.toggle('active')
+            navigation.classList.toggle('active')
+            section.classList.toggle('active')
+        }
+      </script>
+</body>
+</html>

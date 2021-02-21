@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FML | Estadísticas</title>
+    <link  rel="icon"   href="../../img/user1.jpg" type="image/png" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="../../css/styleNoticeX.css">
+</head>
+<body>
+    
+    <section class="section">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+
+              <div class="swiper-slide">
+                  <div class="testimonialBox">
+                    <a href="#" class="linkNotice3">Goles</a> 
+                    <a href="#" class="linkNotice4">Todos</a>
+                    <div class="content">
+                        <img src="../../img/goles.jpg" alt="">
+                        <div class="details">
+                            <div class="imgBx">
+                                <img src="../../img/goles1.jpg" alt="">
+                            </div>
+                        </div>
+                        <br>
+                        <h3><span>Actualizado a Jornada 1</span></h3>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="testimonialBox">
+                      <a href="#" class="linkNotice3">Asistencias</a> 
+                      <a href="#" class="linkNotice4">Todos</a>
+                      <div class="content">
+                          <img src="../../img/goles.jpg" alt="">
+                          <div class="details">
+                              <div class="imgBx">
+                                  <img src="../../img/asis.jpg" alt="">
+                              </div>
+                          </div>
+                          <br>
+                          <h3><span>Actualizado a Jornada 1</span></h3>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="testimonialBox">
+                      <a href="#" class="linkNotice3">Zamoras</a> 
+                      <a href="#" class="linkNotice4">Todos</a>
+                      <div class="content">
+                          <img src="../../img/goles.jpg" alt="">
+                          <div class="details">
+                              <div class="imgBx">
+                                  <img src="../../img/zamora.jpg" alt="">
+                              </div>
+                          </div>
+                          <br>
+                          <h3><span>Actualizado a Jornada 1</span></h3>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="testimonialBox">
+                      <a href="#" class="linkNotice3">Media</a> 
+                      <a href="#" class="linkNotice4">Todos</a>
+                      <div class="content">
+                          <img src="../../img/goles.jpg" alt="">
+                          <div class="details">
+                              <div class="imgBx">
+                                  <img src="../../img/media.jpg" alt="">
+                              </div>
+                          </div>
+                          <br>
+                          <h3><span>Actualizado a Jornada 1</span></h3>
+                      </div>
+                    </div>
+                  </div>
+
+             </div> 
+          </div>
+    </section>
+
+    <div class="menuToggle" onclick="ToggleMenu()"></div>
+    <div class="navigation">
+        
+        <div class="navArea">
+            <ul>
+                <li>
+                    <a href="../inicio/index.html" onmouseenter="changeImage('../../img/img2.jpg')">Inicio</a>
+                </li>
+                <li>
+                    <a href="../equipo/index.html" onmouseenter="changeImage('../../img/img3.jpg')">Equipos</a>
+                </li>
+                <li>
+                    <a href="../partidos/index.html" onmouseenter="changeImage('../../img/img4.jpg')">Partidos</a>
+                </li>
+                <li>
+                    <a href="../clasificacion/index.html" onmouseenter="changeImage('../../img/img7.jpg')">Clasificación</a>
+                </li>
+                <li>
+                    <a href="../estadisticas/index.html" onmouseenter="changeImage('../../img/img5.jpg')">Estadísticas</a>
+                </li>
+                <li>
+                    <a href="../construccion/index.html" onmouseenter="changeImage('../../img/img1.jpg')">Otras ediciones</a>
+                </li>
+            </ul>
+        </div>
+        <div class="imgArea">
+            <img src="../../img/img1.jpg" id="slider" alt="">
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+          effect: 'coverflow',
+          grabCursor: true,
+          centeredSlides: true,
+          slidesPerView: 'auto',
+          coverflowEffect: {
+            rotate: 0, //estaba a 50
+            stretch: 0,
+            depth: 100,
+            modifier: 2, //estaba a 1
+            slideShadows: true,
+          },
+          /*loop: true,*/
+          pagination: {
+             el: '.swiper-pagination',
+          },
+        });
+
+        function changeImage(anything) {
+            document.getElementById('slider').src = anything;
+        }
+
+        function ToggleMenu() {
+            const menuToggle = document.querySelector('.menuToggle');
+            const navigation = document.querySelector('.navigation');
+            const section = document.querySelector('.section');
+            menuToggle.classList.toggle('active')
+            navigation.classList.toggle('active')
+            section.classList.toggle('active')
+        }
+      </script>
+</body>
+</html>

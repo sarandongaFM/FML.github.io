@@ -335,5 +335,8 @@ section {
     .swiper-slide {
         width: 100%;
     }
+    .testimonialBox .content img {
+        width: calc(100% - 30px);
+    }
 
 }
